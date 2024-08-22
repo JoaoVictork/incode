@@ -21,7 +21,12 @@ public class TipoString {
         System.out.println("Nome = "+nome+" Sobrenome = "+sobrenome+" idade = "+idade+" salario = "+salario+"\n");
         System.out.println("-----------exemplo 02 de forma de printar-----------");
         System.out.println("Nome = "+nome+"\nSobrenome = "+sobrenome+"\nidade = "+idade+"\nsalario = "+salario);
+        System.out.println();
         System.out.println("-----------exemplo 03 de forma de printar-----------");
-        System.out.printf("O funcionário %s %s tem %d anos e ganha R$%.2f por mês", nome,sobrenome,idade,salario);
+        System.out.printf("O funcionário %s %s tem %d anos e ganha R$%.2f por mês%n", nome,sobrenome,idade,salario);
+        System.out.println();
+        System.out.println("-----------exemplo 04 de forma de printar-----------");
+        String forma04 = String.format("O funcionário %s %s tem %d anos e ganha R$%.2f por mês%n", nome,sobrenome,idade,salario);
+        System.out.println(forma04);
     }
 }
