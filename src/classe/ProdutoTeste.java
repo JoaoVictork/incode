@@ -13,8 +13,7 @@ public class ProdutoTeste {
         System.out.printf("O preço base do produto %s é: %.2f.\n", p1.nome,p1.preco);
         System.out.printf("O preço base do produto %s é: %.2f.\n", p2.nome,p2.preco);
 
-        double
-
+        System.out.println("pra alterar");
         scan.close();
     }
 }
