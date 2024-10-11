@@ -24,4 +24,32 @@ public class Estacionamento {
             return null;
         }
     }
+
+    public double pagarTicket(Ticket ticketParaPagar){
+        if(ticketParaPagar != null && !ticketParaPagar.estaPago()){
+            ticketParaPagar.pagarTicket();
+            saldo += ticketParaPagar.getValor();
+            System.out.println("Ticket pago com sucesso.");
+            System.out.printf("Valor do ticket: R$ %.1f",ticketParaPagar.getValor());
+            System.out.printf("Saldo atual: R$ %.2f",saldo);
+            return saldo;
+        }
+        else {
+            System.out.println("Ticket já pago ou inexistente.");
+            return 0;
+        }
+    }
+
+    public double consultarSaldo(){
+        return saldo;
+    }
+
+    public Ticket buscarTicket(int id){
+        for (Ticket ticketId : tickets){
+            if (ticketId.getId() == id){
+                return ticketId;
+            }
+        }
+        return null;
+    }
 }

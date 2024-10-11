@@ -11,7 +11,8 @@ public class Ticket {
         this.valorTicket = 10;
         this.pago = false;
     }
-    public double getValor(){ return valorTicket;}
-    public boolean estaPago(){ return pago;}
-    public void pagarTicket(){ this.pago = true;}
+    public int getId(){ return idTicket; }
+    public double getValor(){ return valorTicket; }
+    public boolean estaPago(){ return pago; }
+    public void pagarTicket(){ this.pago = true; }
 }
