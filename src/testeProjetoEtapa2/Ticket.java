@@ -1,0 +1,17 @@
+package testeProjetoEtapa2;
+
+public class Ticket {
+    private static int contadorTicket = 0;
+    private int idTicket;
+    private double valorTicket;
+    private boolean pago;
+
+    public Ticket(){
+        this.idTicket = ++contadorTicket;
+        this.valorTicket = 10;
+        this.pago = false;
+    }
+    public double getValor(){ return valorTicket;}
+    public boolean estaPago(){ return pago;}
+    public void pagarTicket(){ this.pago = true;}
+}
