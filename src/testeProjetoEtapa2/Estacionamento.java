@@ -52,4 +52,15 @@ public class Estacionamento {
         }
         return null;
     }
+
+    public void verificar(int ticket){
+        for (Ticket verificador : tickets){
+            if (verificador.estaPago()){
+                System.out.println("O ticket está pago.\n");
+            }
+            else {
+                System.out.println("o ticket está pendente.");
+            }
+        }
+    }
 }
