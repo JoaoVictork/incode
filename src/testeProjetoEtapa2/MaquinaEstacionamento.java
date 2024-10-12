@@ -1,5 +1,6 @@
 package testeProjetoEtapa2;
 
+import java.util.ConcurrentModificationException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -38,7 +39,6 @@ public class MaquinaEstacionamento {
                         Digite uma opção: 
                         """);
                 int opcao = scan.nextInt();
-                scan.next();
                 try {
                     switch (opcao){
                         case 1:
@@ -51,7 +51,6 @@ public class MaquinaEstacionamento {
                         case 2:
                             System.out.print("Digite o id do ticket:");
                             int id = scan.nextInt();
-                            scan.next();
                             Ticket ticketPagar = maquina.buscarTicket(id);
                             if (ticketPagar != null){
                                 maquina.pagarTicket(ticketPagar);
@@ -72,11 +71,21 @@ public class MaquinaEstacionamento {
                             break;
 
                         case 5:
+                            System.out.println("Saindo...");
+                            System.exit(0);
+                            scan.close();
+                            break;
+                        default:
+
+                            System.out.println("Opção inválida");
 
                     }
+                } catch (ConcurrentModificationException e) {
+                    System.out.print(" \n");
                 }
+            } catch (InputMismatchException e) {
+                System.out.println("Por favor, digite um número inteiro válido.");
             }
         }
-        scan.close();
     }
 }

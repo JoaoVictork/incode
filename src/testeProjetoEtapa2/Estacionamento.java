@@ -29,9 +29,9 @@ public class Estacionamento {
         if(ticketParaPagar != null && !ticketParaPagar.estaPago()){
             ticketParaPagar.pagarTicket();
             saldo += ticketParaPagar.getValor();
-            System.out.println("Ticket pago com sucesso.");
-            System.out.printf("Valor do ticket: R$ %.1f",ticketParaPagar.getValor());
-            System.out.printf("Saldo atual: R$ %.2f",saldo);
+            System.out.println("Ticket pago com sucesso.\n");
+            System.out.printf("Valor do ticket: R$ %.1f\n",ticketParaPagar.getValor());
+            System.out.printf("Saldo atual: R$ %.2f\n",saldo);
             return saldo;
         }
         else {
@@ -59,7 +59,7 @@ public class Estacionamento {
                 System.out.println("O ticket está pago.\n");
             }
             else {
-                System.out.println("o ticket está pendente.");
+                System.out.println("o ticket está pendente ou não existe.");
             }
         }
     }
