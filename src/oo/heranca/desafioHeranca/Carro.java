@@ -7,18 +7,16 @@ public class Carro {
         return velocidade;
     }
 
-    public boolean acelerar(){
+    public void acelerar(){
         if (velocidade >= 0){
             velocidade += 5;
         }
-        return true;
     }
 
-    public boolean freiar(){
-        if (velocidade >= 0){
+    public void freiar(){
+        if (velocidade >= 5){
             velocidade -= 5;
         }
-        return true;
     }
 
     public double getVelocidade() {
