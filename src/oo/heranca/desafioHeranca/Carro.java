@@ -1,11 +1,7 @@
 package oo.heranca.desafioHeranca;
 
 public class Carro {
-    private double velocidade = 0;
-
-    public double velocidadeAtual(){
-        return velocidade;
-    }
+     double velocidade = 0;
 
     public void acelerar(){
         if (velocidade >= 0){
@@ -19,11 +15,7 @@ public class Carro {
         }
     }
 
-    public double getVelocidade() {
-        return velocidade;
-    }
-
-    public void setVelocidade(double velocidade) {
-        this.velocidade = velocidade;
+    public String toString(){
+        return "A velocidade é: " + velocidade + "Km/h.";
     }
 }
