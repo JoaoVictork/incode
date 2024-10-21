@@ -3,9 +3,9 @@ package oo.heranca.desafioHeranca;
 public class Dirigir {
 
     public static void main(String[] args) {
-        Carro c1 = new Carro();
-        Ferrari ferrari = new Ferrari();
-        Supra supra = new Supra();
+        Carro c1 = new Carro(290);
+        Ferrari ferrari = new Ferrari(470);
+        Supra supra = new Supra(320);
 
         c1.acelerar();
         ferrari.acelerar();
