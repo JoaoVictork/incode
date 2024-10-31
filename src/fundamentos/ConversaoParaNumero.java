@@ -14,5 +14,6 @@ public class ConversaoParaNumero {
         double soma = numero1 + numero2;
         System.out.printf("O valor da soma é: %.14f", soma);
         System.out.println("A média é: "+soma/2);
+        //teste
     }
 }
